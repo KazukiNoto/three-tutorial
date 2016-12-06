@@ -9,15 +9,6 @@ let init = () => {
     //create scene
     let scene = new THREE.Scene();
 
-    //create camera
-    let camera = new THREE.PerspectiveCamera(
-        45, windowData.width / windowData.height, 0.1, 3000
-    );
-    camera.position.x = 0;
-    camera.position.y = 200;
-    camera.position.z = 400;
-    camera.lookAt(new THREE.Vector3(0, 0, 0));
-
     //create spotlight for the shadows
     let spotlight = new THREE.SpotLight(0xffffff);
     spotlight.position.set(600, 600, 600);
@@ -51,6 +42,15 @@ let init = () => {
         });
 
     });
+
+    //create camera
+    let camera = new THREE.PerspectiveCamera(
+        45, windowData.width / windowData.height, 0.1, 3000
+    );
+    camera.position.x = 0;
+    camera.position.y = 200;
+    camera.position.z = 400;
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
 
     //create render
     let renderer = new THREE.WebGLRenderer();
