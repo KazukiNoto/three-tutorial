@@ -1,0 +1,12 @@
+.idea
+.sass-cache
+.DS_Store
+node_modules
+bower_components
+public
+<<<<<<< HEAD
+guide
+prepros.cfg
+=======
+guide
+>>>>>>> 755fd7b... fix Animation
