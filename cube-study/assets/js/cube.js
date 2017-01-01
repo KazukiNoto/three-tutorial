@@ -47,21 +47,24 @@ let init = () => {
     // add the output of the renderer to the html element
     document.getElementById('js-WebGL').appendChild(renderer.domElement);
 
-    // //TrackballControls
-    // let controls = new THREE.TrackballControls(camera);
+    //TrackballControls
+    let controls = new THREE.TrackballControls(camera);
 
     //render
-    renderer.render(scene, camera);
+    // renderer.render(scene, camera);
 
-    // call the render function
-    // let renderScene = () => {
-    //     controls.update();
-    //     requestAnimationFrame(renderScene);
-    //     renderer.render(scene, camera);
-    // };
-    // renderScene();
+    // // call the render function
+    let renderScene = () => {
+        controls.update();
 
-}
-;
+        camera.position.x += 0.5;
+        camera.position.y += 0.5;
+
+        requestAnimationFrame(renderScene);
+        renderer.render(scene, camera);
+    };
+    renderScene();
+
+};
 
 window.onload = init();
