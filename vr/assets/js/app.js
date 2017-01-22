@@ -13,7 +13,7 @@ let init = () => {
     let spotlight = new THREE.SpotLight(0xffffff);
     spotlight.position.set(600, 600, 600);
     spotlight.castShadow = true;
-    spotlight.intensity = 2;
+    spotlight.intensity = 1;
 
     scene.add(spotlight);
 
@@ -31,11 +31,11 @@ let init = () => {
         objLoader.load( 'city.obj', function ( loadedMesh ) {
 
             //arrange the location
-            loadedMesh.rotation.x = -0.3;
+            loadedMesh.rotation.x = -0.25;
             loadedMesh.rotation.y = 0;
             loadedMesh.rotation.z = 0;
             loadedMesh.position.x = 500;
-            loadedMesh.position.y = 250;
+            loadedMesh.position.y = 210;
             loadedMesh.position.z = 1000;
             scene.add(loadedMesh);
 
@@ -96,6 +96,11 @@ let init = () => {
     };
 
     renderScene(performance ? performance.now() : Date.now());
+
+    let fog = () => {
+        scene.fog = new THREE.FogExp2( 0xffffff, 0.00055); //color, depth
+    };
+    fog();
 
 };
 
