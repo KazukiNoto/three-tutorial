@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+<div id="js-WebGL"></div>
+<div id="js-headline">
+  <h1>HELLO CITY</h1>
+</div>
+
+
+<script src="./assets/lib/three.min.js"></script>
+<script src="./assets/lib/OBJLoader.js"></script>
+<script src="./assets/lib/MTLLoader.js"></script>
+<script src="./assets/lib/TrackballControls.js"></script>
+<script src="./assets/lib/VRControls.js"></script>
+<script src="./assets/lib/VREffect.js"></script>
+<script src="./assets/lib/webvr-polyfill.min.js"></script>
+<script src="./assets/lib/webvr-manager.js"></script>
+<script src="./assets/js/app-dist.js"></script>
+<script>
+  window.onload = setTimeout(play, 1000);
+
+  function play(){
+    document.getElementById('js-headline').className = 'is-active';
+  }
+</script>
+</body>
+</html>

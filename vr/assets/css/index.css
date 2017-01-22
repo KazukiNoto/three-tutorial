@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#js-headline {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+}
+#js-headline h1 {
+    color: #ddd;
+    font-size: 150px;
+    width: 100%;
+    margin: 0;
+    /*transform: translate3d(0, 100%, 0);*/
+    opacity: 0;
+    transition: transform 3s, opacity 3s;
+}
+#js-headline.is-active h1 {
+    /*transform: translate3d(0, 0, 0);*/
+    opacity: .9;
+}
