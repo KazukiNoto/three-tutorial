@@ -17,6 +17,10 @@ let init = () => {
 
     scene.add(spotlight);
 
+    //Light for avoiding dark shadow completely
+    let ambientLight = new THREE.AmbientLight(0x222222);
+    scene.add(ambientLight);
+
     //load OBJ,MTL files
     let mtlLoader = new THREE.MTLLoader();
     mtlLoader.setTexturePath( './assets/obj/city/' );
